@@ -6,8 +6,8 @@
     "kmartin": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
+        "@schematics/angular:component": {
+          "style": "scss"
         }
       },
       "root": "",
@@ -23,13 +23,19 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
+              "src/favicon.svg",
               "src/assets"
             ],
             "styles": [
-              "src/custom-theme.scss",
-              "src/styles.css"
+              "src/styles.scss",
+              "src/theme/app-theme.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/theme/config",
+                "src/theme/custom-component-themes"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -91,11 +97,12 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
+              "src/favicon.svg",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "src/theme/app-theme.scss"
             ],
             "scripts": []
           }
