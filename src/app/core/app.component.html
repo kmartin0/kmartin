@@ -1,0 +1,26 @@
+<div class="app-component-container page-container mat-app-background"
+     [ngClass]="(isDarkTheme$ | async) ? 'theme-dark' : 'theme-default'">
+
+  <app-basic-toolbar>
+    <span>Welcome</span>
+    <span class="toolbar-spacer"></span>
+  </app-basic-toolbar>
+
+  <div class="app-component-content">
+    <h1>References</h1>
+
+    <h2>Github</h2>
+    <p><a href="https://github.com/kmartin0">https://github.com/kmartin0 </a></p>
+
+    <h2>Darts Matcher</h2>
+    <p><a href="https://darts-matcher-web.herokuapp.com">https://darts-matcher-web.herokuapp.com</a> (heroku-hosted)</p>
+    <p><a href="https://dartsmatcher.kmartin.nl">https://dartsmatcher.kmartin.nl</a> (self-hosted)</p>
+
+    <h2>Parcel Organizer</h2>
+    <p><a href="https://parcel-organizer-web.herokuapp.com">https://parcel-organizer-web.herokuapp.com</a>
+      (heroku-hosted)</p>
+    <p><a href="https://parcelorganizer.kmartin.nl">https://parcelorganizer.kmartin.nl</a> (self-hosted)</p>
+
+  </div>
+
+</div>

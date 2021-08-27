@@ -1,7 +1,9 @@
 @use '~@angular/material/index' as mat;
 @use 'sass:map';
+@use 'app-component-theme';
 
 @mixin all-custom-component-themes($theme) {
+  @include app-component-theme.theme($theme);
 }
 
 @mixin all-custom-component-colors($theme) {

@@ -18,7 +18,7 @@ $dark-theme-custom-palette: mat.define-palette($dark-theme-custom-color-collecti
 $dark-theme-primary: mat.define-palette(custom-color-palettes.$mat-deep-orange-200);
 
 // Accent palette.
-$dark-theme-accent: mat.define-palette(custom-color-palettes.$mat-indigo-blue-200);
+$dark-theme-accent: mat.define-palette(custom-color-palettes.$mat-indigo-200);
 
 // Create the dark theme.
 $dark-theme: mat.define-dark-theme((

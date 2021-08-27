@@ -1,0 +1,9 @@
+<div class="basic-toolbar-container">
+  <mat-toolbar [color]="(isDarkTheme$ | async) ? null : 'primary'">
+    <mat-toolbar-row>
+      <ng-content></ng-content>
+      <app-theme-toggle *ngIf="showThemeToggle"></app-theme-toggle>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+

@@ -18,7 +18,7 @@ $light-theme-custom-palette: mat.define-palette($light-theme-custom-color-collec
 $light-theme-primary: mat.define-palette(custom-color-palettes.$mat-deep-orange-500);
 
 // Accent palette.
-$light-theme-accent: mat.define-palette(custom-color-palettes.$mat-indigo-blue-200);
+$light-theme-accent: mat.define-palette(custom-color-palettes.$mat-indigo-200);
 
 // Create the light theme.
 $light-theme: mat.define-light-theme((
