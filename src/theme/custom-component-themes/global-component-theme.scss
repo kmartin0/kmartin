@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use '~@angular/material/index' as mat;
+@use 'devices' as devices;
+
+@mixin color($theme) {
+  // Get the color config from the theme.
+  $color-config: mat.get-color-config($theme);
+  $primary: map.get($color-config, accent);
+  $background-palette: map.get($color-config, background);
+  $custom-palette: map.get($color-config, custom);
+
+  .mat-icon-button:hover {
+    background-color: mat.get-color-from-palette($background-palette, hover);
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    color: mat.get-color-from-palette($primary);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@mixin typography($theme) {
+  // Get the typography config from the theme.
+  $typography-config: mat.get-typography-config($theme);
+
+}
+
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include color($theme);
+  }
+
+  $typography-config: mat.get-typography-config($theme);
+  @if $typography-config != null {
+    @include typography($theme);
+  }
+}

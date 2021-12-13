@@ -1,0 +1,26 @@
+<a [routerLink]="project.routeParam" *ngIf="project">
+
+  <mat-card class="project-card-component-container">
+
+    <h2 class="title">{{project.title}}</h2>
+
+    <div class="image-container">
+      <img class="image"
+           [src]="project.imageUrls ? project.imageUrls[0]?.url : ''"
+           [alt]="project.title">
+    </div>
+
+    <div class="icon-container">
+      <div *ngFor="let tech of project.techs">
+
+        <img class="icon"
+             [src]="tech.url"
+             [alt]="tech.name"
+             [matTooltip]="tech.name">
+
+      </div>
+
+    </div>
+
+  </mat-card>
+</a>

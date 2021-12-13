@@ -1,0 +1,42 @@
+<div #test class="page-container project-details-component-container"*ngIf="project">
+
+  <div class="title-container">
+    <h1 class="title">Parcel Organizer</h1>
+
+    <div class="tech-icons-container">
+      <img *ngFor="let tech of project.techs" class="icon"
+           [src]="tech.url"
+           [alt]="tech.name"
+           [matTooltip]="tech.name">
+    </div>
+  </div>
+
+  <mat-divider style="margin: 16px 0"></mat-divider>
+
+  <h4>{{project.description}}</h4>
+
+  <h2>References</h2>
+  <a *ngFor="let link of project.links" [href]="link.url" [matTooltip]="link.icon.name" target="_blank">
+    <img class="icon"
+         [src]="link.icon.url"
+         [alt]="link.icon.name">
+  </a>
+
+  <h2>Features</h2>
+  <ul>
+    <li *ngFor="let feature of project.features">{{feature}}</li>
+  </ul>
+
+  <h2>Technical Overview</h2>
+  <ul>
+    <li *ngFor="let technicalFeature of project.features">{{technicalFeature}}</li>
+  </ul>
+
+  <h2>Screenshots</h2>
+  <swiper class="image-carousel-container" [config]="swiperConfig">
+    <ng-container *ngFor="let imageUrl of project.imageUrls">
+      <ng-template swiperSlide><img class="image" [src]="imageUrl?.url" [alt]="imageUrl?.name"></ng-template>
+    </ng-container>
+  </swiper>
+
+</div>

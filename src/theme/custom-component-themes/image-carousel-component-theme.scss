@@ -10,50 +10,16 @@
   $background-palette: map.get($color-config, background);
   $custom-palette: map.get($color-config, custom);
 
-  .app-component-container {
-    .sidenav-inner-container {
-      a {
-        color: mat.get-color-from-palette($primary);
-      }
-
-      a:after {
-        color: mat.get-color-from-palette($secondary);
-      }
-    }
+  .image-carousel-component-container {
   }
-
 }
 
 @mixin typography($theme) {
   // Get the typography config from the theme.
   $typography-config: mat.get-typography-config($theme);
 
-  .app-component-container {
+  .image-carousel-component-container {
 
-    .sidenav-inner-container {
-      a {
-        @include mat.typography-level($typography-config, display-1);
-        font-weight: 500;
-
-        mat-icon {
-          line-height: 100%;
-          height: 30px;
-          font-size: 30px;
-          width: 30px;
-        }
-
-        @include devices.device(desktop, desktop-xl) {
-          @include mat.typography-level($typography-config, display-3);
-          font-weight: 500;
-
-          mat-icon {
-            height: 40px;
-            font-size: 40px;
-            width: 40px;
-          }
-        }
-      }
-    }
   }
 
 }

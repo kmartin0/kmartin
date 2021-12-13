@@ -1,0 +1,5 @@
+@use "helpers";
+
+.resume-page-component-container {
+  @include helpers.module-page;
+}

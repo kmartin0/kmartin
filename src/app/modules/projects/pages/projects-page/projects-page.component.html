@@ -1,0 +1,14 @@
+<div class="page-container projects-page-component-container">
+
+  <div class="project-container" *ngFor="let mainProject of mainProjects">
+    <h1>{{mainProject.title}}</h1>
+
+    <div class="project-cards-container">
+      <app-project-card *ngFor="let project of mainProject.projects" [project]="project"></app-project-card>
+    </div>
+
+    <mat-divider></mat-divider>
+
+  </div>
+
+</div>

@@ -1,0 +1,26 @@
+@use "devices" as devices;
+@use "dimens";
+@use "helpers";
+
+.projects-page-component-container {
+  @include helpers.module-page;
+  width: fit-content;
+}
+
+.project-container {
+  margin: 12px 0;
+}
+
+.project-cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+
+app-project-card {
+  width: 300px;
+  height: 400px;
+  margin: 12px;
+}

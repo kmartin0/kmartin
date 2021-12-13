@@ -1,0 +1,34 @@
+@use "helpers";
+
+.home-page-component-container {
+  @include helpers.module-page;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.header {
+  text-align: center;
+}
+
+.face-icon {
+  $size: 56px;
+
+  width: $size;
+  height: $size;
+  font-size: $size;
+}
+
+.icons-container {
+  display: flex;
+  gap: 24px;
+
+  mat-icon {
+    $size: 36px;
+
+    width: $size;
+    height: $size;
+    font-size: $size;
+  }
+}

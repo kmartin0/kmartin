@@ -2,9 +2,10 @@
 @use 'all-custom-component-themes';
 @use 'light-theme';
 @use 'dark-theme';
+@use "typography";
 
 // Include mat-core (Note: Must be imported exactly once.)
-@include mat.core();
+@include mat.core(typography.$typography-config);
 
 // Set the material component themes to light theme as default.
 @include mat.all-component-themes(light-theme.$light-theme);
