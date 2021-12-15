@@ -27,20 +27,7 @@ export class ProjectDetailsPageComponent implements OnInit {
     this.initProject();
   }
 
-  constructor(private route: ActivatedRoute, private router: Router, private viewPortScroller: ViewportScroller) {
-    // setTimeout(() => {
-    //   console.log('scrolled');
-    //   window.scroll(0,0);
-    //   // this.viewPortScroller.scrollToPosition([0, 0]);
-    // }, 10000);
-  }
-
-  scroll() {
-    console.log(this.testEl);
-    this.viewPortScroller.scrollToPosition([0,0]);
-    // document.getElementsByTagName('mat-drawer-content')[0].scrollTo(0, 0)
-    console.log(document.getElementsByTagName('mat-drawer-content'));
-   // this.testEl.scrollTop = 0;
+  constructor(private route: ActivatedRoute, private router: Router) {
   }
 
   private initProject() {
@@ -54,7 +41,6 @@ export class ProjectDetailsPageComponent implements OnInit {
         .find(proj => proj.routeParam === projectParam);
 
       project ? this.project = project : this.router.navigateByUrl('404');
-
 
     });
   }

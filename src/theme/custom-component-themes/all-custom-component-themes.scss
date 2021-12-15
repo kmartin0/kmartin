@@ -2,12 +2,12 @@
 @use 'sass:map';
 @use 'global-component-theme';
 @use 'app-component-theme';
-@use "image-carousel-component-theme";
+@use "project-details-page-component-theme";
 
 @mixin all-custom-component-themes($theme) {
   @include global-component-theme.theme($theme);
   @include app-component-theme.theme($theme);
-  @include image-carousel-component-theme.theme($theme);
+  @include project-details-page-component-theme.theme($theme);
 }
 
 @mixin all-custom-component-colors($theme) {

@@ -10,16 +10,21 @@
   $background-palette: map.get($color-config, background);
   $custom-palette: map.get($color-config, custom);
 
-  .image-carousel-component-container {
+  .project-details-component-container {
+    .image-carousel-container {
+      border: 2px solid mat.get-color-from-palette($primary);
+      border-radius: 8px;
+      padding: 8px;
+    }
   }
+
 }
 
 @mixin typography($theme) {
   // Get the typography config from the theme.
   $typography-config: mat.get-typography-config($theme);
 
-  .image-carousel-component-container {
-
+  .project-details-component-container {
   }
 
 }

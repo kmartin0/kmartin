@@ -8,6 +8,7 @@ export interface Project {
   features: string[];
   technical: string[];
   imageUrls?: ImageUrl[];
+  stockImageUrl?: ImageUrl;
   techs?: ImageUrl[]
   links: Link[];
 }

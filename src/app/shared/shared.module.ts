@@ -8,7 +8,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
 import {SwiperModule} from 'swiper/angular';
 
 
@@ -18,7 +17,6 @@ import {SwiperModule} from 'swiper/angular';
     ThemeToggleComponent,
     LoseFocusAfterClickDirective,
     PageNotFoundComponent,
-    ImageCarouselComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +30,6 @@ import {SwiperModule} from 'swiper/angular';
     BasicToolbarComponent,
     ThemeToggleComponent,
     LoseFocusAfterClickDirective,
-    ImageCarouselComponent,
     SwiperModule
   ]
 })

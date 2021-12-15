@@ -5,8 +5,8 @@
     <h2 class="title">{{project.title}}</h2>
 
     <div class="image-container">
-      <img class="image"
-           [src]="project.imageUrls ? project.imageUrls[0]?.url : ''"
+      <img *ngIf="project.stockImageUrl" class="image"
+           [src]="project.stockImageUrl.url"
            [alt]="project.title">
     </div>
 
