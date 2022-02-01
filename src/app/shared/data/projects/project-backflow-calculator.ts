@@ -5,7 +5,7 @@ import {MainProject} from "../../models/main-project";
 export const projectBackflowCalculatorAndroid: Project = {
   routeParam: 'backflow-calculator-android',
   title: 'Backflow Calculator Android',
-  description: 'Made as a hobby project to streamline calculation of backflow on the work floor. The Backflow calculator simplifies the process of calculating the total boxes to be returned (Goodsflow).',
+  description: 'Made as a hobby project for Ikea employees to streamline calculation of backflow on the work floor. The Backflow calculator simplifies the process of calculating the total boxes to be returned (Goodsflow).',
   features: [
     'Calculate On The Floor using Supply and SGF.',
     'Calculate Fill Amount using ASSQ and Flex.',
