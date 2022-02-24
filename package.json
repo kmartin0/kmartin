@@ -1,6 +1,10 @@
 {
   "name": "kmartin",
   "version": "0.0.0",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -24,6 +28,9 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "swiper": "^7.1.0",
     "tslib": "^2.3.0",
