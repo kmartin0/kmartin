@@ -14,7 +14,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "ng e2e",
-    "heroku-postbuild": "npm run build-prod-heroku"
+    "heroku-postbuild": "npm run build-prod"
   },
   "private": true,
   "dependencies": {
