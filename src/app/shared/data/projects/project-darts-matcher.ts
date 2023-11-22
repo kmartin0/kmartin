@@ -26,7 +26,6 @@ export const projectDartsMatcherWeb: Project = {
   links: [
     {icon: icons.github, url: 'https://github.com/kmartin0/darts-matcher-web'},
     {icon: icons.hostSelf, url: 'https://dartsmatcher.kmartin.nl'},
-    {icon: icons.hostHeroku, url: 'https://darts-matcher-web.herokuapp.com'}
   ]
 }
 
@@ -41,7 +40,7 @@ export const projectDartsMatcherApi: Project = {
   techs: [icons.api, icons.java, icons.springBoot, icons.websocket, icons.mongodb],
   links: [
     {icon: icons.github, url: 'https://github.com/kmartin0/darts-matcher-api'},
-    {icon: icons.hostHeroku, url: 'https://darts-matcher-api.herokuapp.com'}
+    {icon: icons.hostSelf, url: 'https://api.dartsmatcher.kmartin.nl'}
   ]
 }
 

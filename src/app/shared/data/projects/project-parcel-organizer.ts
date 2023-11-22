@@ -19,8 +19,7 @@ export const projectParcelOrganizerWeb: Project = {
   techs: [icons.web, icons.typescript, icons.angular],
   links: [
     {icon: icons.github, url: 'https://github.com/kmartin0/parcel-organizer-web'},
-    {icon: icons.hostSelf, url: 'https://parcelorganizer.kmartin.nl'},
-    {icon: icons.hostHeroku, url: 'https://parcel-organizer-web.herokuapp.com'}
+    {icon: icons.hostSelf, url: 'https://parcelorganizer.kmartin.nl'}
   ]
 }
 
@@ -60,7 +59,7 @@ export const projectParcelOrganizerApi: Project = {
   techs: [icons.api, icons.java, icons.springBoot, icons.postgresql],
   links: [
     {icon: icons.github, url: 'https://github.com/kmartin0/parcel-organizer-api'},
-    {icon: icons.hostHeroku, url: 'https://parcel-organizer-api.herokuapp.com'}
+    {icon: icons.hostSelf, url: 'https://api.parcelorganizer.kmartin.nl'}
   ]
 }
 

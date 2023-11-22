@@ -17,7 +17,6 @@ export const icons: { [name: string]: ImageUrl } = {
   mysql: {name: 'MySQL', url: 'assets/mysql-icon.svg'},
 
   // Links
-  hostHeroku: {name: 'Heroku hosted', url: 'assets/heroku-icon.svg'},
   hostSelf: {name: 'Self hosted (can be offline)', url: 'assets/raspberrypi-icon.svg'},
   github: {name: 'Github', url: 'assets/github-icon.svg'},
   linkedIn: {name: 'LinkedIn', url: 'assets/linkedin-icon.svg'},

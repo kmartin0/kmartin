@@ -2,9 +2,7 @@
 
 My portfolio website.
 
-Website: https://kmartin.nl
-
-Backup: https://kmartin.herokuapp.com/
+Website hosted on raspberry pi (can be offline): https://kmartin.nl
 
 ## Features
 
