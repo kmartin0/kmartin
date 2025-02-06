@@ -1,15 +1,21 @@
-@use 'node_modules/@angular/material' as mat;
+@use "@angular/material" as mat;
 
 .project-card-component-container {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 8px;
   flex-wrap: nowrap;
-  @include mat.elevation(4);
   border-radius: 20px;
   align-items: center;
   padding: 8px;
+  color: var(--mat-sys-on-surface);
+
+  @include mat.card-overrides((
+    elevated-container-elevation: var(--mat-sys-level2),
+    elevated-container-color: var(--mat-sys-surface-container)
+  ));
 }
 
 .image {
@@ -32,6 +38,7 @@
   text-align: center;
   margin: 0;
   padding: 8px 0;
+  font: var(--mat-sys-title-large);
 }
 
 .icon-container {

@@ -1,8 +1,8 @@
 <a [routerLink]="project.routeParam" *ngIf="project">
 
-  <mat-card class="project-card-component-container">
+  <mat-card appearance="raised" class="project-card-component-container">
 
-    <h2 class="title">{{project.title}}</h2>
+    <p class="title">{{ project.title }}</p>
 
     <div class="image-container">
       <img *ngIf="project.stockImageUrl" class="image"
@@ -12,14 +12,8 @@
 
     <div class="icon-container">
       <div *ngFor="let tech of project.techs">
-
-        <img class="icon"
-             [src]="tech.url"
-             [alt]="tech.name"
-             [matTooltip]="tech.name">
-
+        <mat-icon class="medium-icon" [svgIcon]="tech.iconId!!" [matTooltip]="tech.name"></mat-icon>
       </div>
-
     </div>
 
   </mat-card>

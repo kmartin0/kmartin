@@ -1,3 +1,22 @@
-<button appLoseFocusAfterClick mat-icon-button (click)="toggleTheme()" matTooltip="Toggle Theme">
-  <mat-icon>{{(isDarkTheme$ | async) ? 'light_mode' : 'dark_mode'}}</mat-icon>
-</button>
+<div class="theme-toggle-component-container">
+
+
+  <button mat-icon-button [matMenuTriggerFor]="themeColorMenu">
+    <mat-icon>palette</mat-icon>
+  </button>
+
+  <button appLoseFocusAfterClick mat-icon-button (click)="toggleThemeMode()" matTooltip="Toggle Theme">
+    <mat-icon> {{ getIconForThemeMode(appThemeMode$ | async) }}</mat-icon>
+  </button>
+
+  <mat-menu #themeColorMenu="matMenu">
+    <mat-radio-group class="theme-color-rg" [value]="appThemeColor$ | async" (change)="onThemeSelected($event)">
+
+      <mat-radio-button [value]="APP_THEME_COLOR.DEEP_ORANGE">Deep Orange</mat-radio-button>
+      <mat-radio-button [value]="APP_THEME_COLOR.DEEP_PURPLE">Deep Purple</mat-radio-button>
+      <mat-radio-button [value]="APP_THEME_COLOR.GREEN">Green</mat-radio-button>
+
+    </mat-radio-group>
+  </mat-menu>
+</div>
+

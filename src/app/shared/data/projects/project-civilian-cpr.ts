@@ -1,5 +1,5 @@
 import {Project} from "../../models/project";
-import {icons} from "../icons";
+import {registeredIcons} from "../registeredIcons";
 import {MainProject} from "../../models/main-project";
 
 export const projectCivilianCprAndroid: Project = {
@@ -23,19 +23,19 @@ export const projectCivilianCprAndroid: Project = {
     'Local storage using Room with Coroutines for background operations.'
   ],
   imageUrls: [
-    {name: 'Notification', url: 'https://github.com/kmartin0/assets/blob/master/civilian-cpr/Civilian_cpr_notification.png?raw=true'},
-    {name: 'Google Maps Directions', url: 'https://github.com/kmartin0/assets/blob/master/civilian-cpr/Civilian_cpr_google_maps.png?raw=true'},
-    {name: 'Empty State', url: 'https://github.com/kmartin0/assets/blob/master/civilian-cpr/Civilian_cpr_empty_state.png?raw=true'},
-    {name: 'Empty State Dark', url: 'https://github.com/kmartin0/assets/blob/master/civilian-cpr/Civilian_cpr_empty_state_dark.png?raw=true'},
-    {name: 'Messages', url: 'https://github.com/kmartin0/assets/blob/master/civilian-cpr/Civilian_cpr_messages.png?raw=true'},
-    {name: 'Messages Dark', url: 'https://github.com/kmartin0/assets/blob/master/civilian-cpr/Civilian_cpr_messages_dark.png?raw=true'},
-    {name: 'Messages Context Menu', url: 'https://github.com/kmartin0/assets/blob/master/civilian-cpr/Civilian_cpr_message_context_menu.png?raw=true'},
-    {name: 'Messages Delete Action Mode', url: 'https://github.com/kmartin0/assets/blob/master/civilian-cpr/Civilian_cpr_action_mode_delete.png?raw=true'},
+    {name: 'Notification', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/civilian-cpr/Civilian_cpr_notification.png'},
+    {name: 'Google Maps Directions', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/civilian-cpr/Civilian_cpr_google_maps.png'},
+    {name: 'Empty State', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/civilian-cpr/Civilian_cpr_empty_state.png'},
+    {name: 'Empty State Dark', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/civilian-cpr/Civilian_cpr_empty_state_dark.png'},
+    {name: 'Messages', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/civilian-cpr/Civilian_cpr_messages.png'},
+    {name: 'Messages Dark', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/civilian-cpr/Civilian_cpr_messages_dark.png'},
+    {name: 'Messages Context Menu', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/civilian-cpr/Civilian_cpr_message_context_menu.png'},
+    {name: 'Messages Delete Action Mode', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/civilian-cpr/Civilian_cpr_action_mode_delete.png'},
   ],
-  stockImageUrl:     {name: 'Notification', url: 'https://github.com/kmartin0/assets/blob/master/civilian-cpr/Civilian_cpr_notification.png?raw=true'},
-  techs: [icons.android, icons.kotlin],
+  stockImageUrl:     {name: 'Notification', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/civilian-cpr/Civilian_cpr_notification.png'},
+  techs: [registeredIcons.android, registeredIcons.kotlin],
   links: [
-    {icon: icons.github, url: 'https://github.com/kmartin0/civilian-cpr'}
+    {icon: registeredIcons.github, url: 'https://github.com/kmartin0/civilian-cpr'}
   ]
 }
 

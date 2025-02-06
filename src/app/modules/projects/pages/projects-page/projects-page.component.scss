@@ -11,6 +11,11 @@
   margin: 12px 0;
 }
 
+.title {
+  font: var(--mat-sys-headline-medium);
+  margin: 0 0 4px;
+}
+
 .project-cards-container {
   width: 100%;
   display: flex;

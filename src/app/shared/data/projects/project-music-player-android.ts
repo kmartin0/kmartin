@@ -1,5 +1,5 @@
 import {Project} from "../../models/project";
-import {icons} from "../icons";
+import {registeredIcons} from "../registeredIcons";
 import {MainProject} from "../../models/main-project";
 
 export const projectMusicPlayerAndroid: Project = {
@@ -17,16 +17,16 @@ export const projectMusicPlayerAndroid: Project = {
   ],
   technical: ['Kotlin', 'MVVM using Architecture Components.', 'Index audio files on device using MediaStore.', 'Use of MediaBrowserService, MediaSession, MediaController.'],
   imageUrls: [
-    {name: 'Empty queue', url: 'https://github.com/kmartin0/assets/blob/master/android-music-player/android-music-player_empty_queue.png?raw=true'},
-    {name: 'Playing', url: 'https://github.com/kmartin0/assets/blob/master/android-music-player/android-music-player_home_playing.png?raw=true'},
-    {name: 'Music Player', url: 'https://github.com/kmartin0/assets/blob/master/android-music-player/android-music-player_player.png?raw=true'},
-    {name: 'Lyrics', url: 'https://github.com/kmartin0/assets/blob/master/android-music-player/android-music-player_lyrics.png?raw=true'},
-    {name: 'Widget', url: 'https://github.com/kmartin0/assets/blob/master/android-music-player/android-music-player_widget.png?raw=true'},
+    {name: 'Empty queue', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/android-music-player/android-music-player_empty_queue.png'},
+    {name: 'Playing', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/android-music-player/android-music-player_home_playing.png'},
+    {name: 'Music Player', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/android-music-player/android-music-player_player.png'},
+    {name: 'Lyrics', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/android-music-player/android-music-player_lyrics.png'},
+    {name: 'Widget', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/android-music-player/android-music-player_widget.png'},
   ],
-  stockImageUrl: {name: 'Empty queue', url: 'https://github.com/kmartin0/assets/blob/master/android-music-player/android-music-player_empty_queue.png?raw=true'},
-  techs: [icons.android, icons.java],
+  stockImageUrl: {name: 'Empty queue', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/android-music-player/android-music-player_empty_queue.png'},
+  techs: [registeredIcons.android, registeredIcons.java],
   links: [
-    {icon: icons.github, url: 'https://github.com/kmartin0/MusicPlayerAndroid'}
+    {icon: registeredIcons.github, url: 'https://github.com/kmartin0/MusicPlayerAndroid'}
   ]
 }
 

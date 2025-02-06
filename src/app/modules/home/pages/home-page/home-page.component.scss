@@ -12,6 +12,16 @@
   text-align: center;
 }
 
+.title {
+  font: var(--mat-sys-headline-small);
+  margin: 0 0 16px;
+}
+
+.subtitle {
+  font: var(--mat-sys-body-large);
+  margin: 0 0 16px;
+}
+
 .face-icon {
   $size: 56px;
 
@@ -22,13 +32,5 @@
 
 .icons-container {
   display: flex;
-  gap: 24px;
-
-  mat-icon {
-    $size: 36px;
-
-    width: $size;
-    height: $size;
-    font-size: $size;
-  }
+  gap: 12px;
 }

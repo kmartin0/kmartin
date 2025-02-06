@@ -1,20 +1,42 @@
 import {Component} from '@angular/core';
-import {ThemeService} from '../../services/theme-service';
+import {APP_THEME_MODE, ThemeModeService} from '../../services/theme-mode-service';
+import {APP_THEME_COLOR, ThemeColorService} from "../../services/theme-color-service";
+import {MatRadioChange} from "@angular/material/radio";
 
 @Component({
   selector: 'app-theme-toggle',
   templateUrl: './theme-toggle.component.html',
-  styleUrls: ['./theme-toggle.component.scss']
+  styleUrls: ['./theme-toggle.component.scss'],
+  standalone: false
 })
 export class ThemeToggleComponent {
 
-  isDarkTheme$ = this.themeService.isDarkTheme;
+  appThemeMode$ = this.themeModeService.themeMode$;
+  appThemeColor$ = this.themeColorService.themeColor$;
 
-  constructor(private themeService: ThemeService) {
+  constructor(private themeModeService: ThemeModeService, private themeColorService: ThemeColorService) {
   }
 
-  toggleTheme() {
-    this.themeService.toggleTheme();
+  toggleThemeMode() {
+    this.themeModeService.toggleThemeMode();
   }
 
+  getIconForThemeMode(theme: APP_THEME_MODE | null): string {
+    switch (theme) {
+      case APP_THEME_MODE.LIGHT:
+        return 'dark_mode'
+      case APP_THEME_MODE.DARK:
+        return 'light_mode'
+      default:
+        return '';
+    }
+  }
+
+  onThemeSelected(change: MatRadioChange) {
+    const selectedTheme = change.value as APP_THEME_COLOR;
+
+    this.themeColorService.setThemeColor(selectedTheme);
+  }
+
+  protected readonly APP_THEME_COLOR = APP_THEME_COLOR;
 }

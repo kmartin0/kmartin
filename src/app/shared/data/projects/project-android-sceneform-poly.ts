@@ -1,5 +1,5 @@
 import {Project} from "../../models/project";
-import {icons} from "../icons";
+import {registeredIcons} from "../registeredIcons";
 import {MainProject} from "../../models/main-project";
 
 export const projectAndroidSceneformPoly: Project = {
@@ -19,13 +19,13 @@ export const projectAndroidSceneformPoly: Project = {
     ],
   technical: [],
   imageUrls: [
-    {name: 'Home', url: 'https://github.com/kmartin0/assets/blob/master/android-sceneform-poly/sceneform_poly_example_2.jpg?raw=true'},
-    {name: 'AR', url: 'https://github.com/kmartin0/assets/blob/master/android-sceneform-poly/sceneform_poly_example_1.jpg?raw=true'},
+    {name: 'Home', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/android-sceneform-poly/sceneform_poly_example_2.jpg'},
+    {name: 'AR', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/android-sceneform-poly/sceneform_poly_example_1.jpg'},
   ],
-  stockImageUrl: {name: 'AR', url: 'https://github.com/kmartin0/assets/blob/master/android-sceneform-poly/sceneform_poly_example_1.jpg?raw=true'},
-  techs: [icons.android, icons.java, icons.arcore],
+  stockImageUrl: {name: 'AR', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/android-sceneform-poly/sceneform_poly_example_1.jpg'},
+  techs: [registeredIcons.android, registeredIcons.java, registeredIcons.arcore],
   links: [
-    {icon: icons.github, url: 'https://github.com/kmartin0/android-sceneform-poly'}
+    {icon: registeredIcons.github, url: 'https://github.com/kmartin0/android-sceneform-poly'}
   ]
 }
 

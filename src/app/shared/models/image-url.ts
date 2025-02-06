@@ -1,4 +1,5 @@
 export interface ImageUrl {
   name: string;
-  url: string
+  url: string;
+  iconId?: string;
 }

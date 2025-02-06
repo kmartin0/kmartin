@@ -1,0 +1,18 @@
+@use '@angular/material' as mat;
+
+button {
+  color: inherit;
+}
+
+.theme-color-rg {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+mat-radio-button {
+  padding: 0 8px;
+}
+
+
+

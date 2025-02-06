@@ -1,9 +1,8 @@
-import {NgModule, ViewChild} from '@angular/core';
-import {Routes, RouterModule, PreloadAllModules, Router, Scroll, Event} from '@angular/router';
-import {CommonModule, ViewportScroller} from '@angular/common';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule, Router, Scroll, Event} from '@angular/router';
+import {CommonModule} from '@angular/common';
 import {PageNotFoundComponent} from '../shared/components/page-not-found/page-not-found.component';
 import {filter} from 'rxjs/operators';
-import {CdkScrollable} from '@angular/cdk/overlay';
 
 export const appRoutes: Routes = [
   {
@@ -26,10 +25,8 @@ export const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forRoot(appRoutes , {
-    relativeLinkResolution: 'legacy',
-    scrollPositionRestoration: 'enabled',
-    // preloadingStrategy: PreloadAllModules
+  imports: [CommonModule, RouterModule.forRoot(appRoutes, {
+    scrollPositionRestoration: 'enabled'
   })],
   exports: [RouterModule]
 })

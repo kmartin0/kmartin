@@ -1,0 +1,18 @@
+@use '@angular/material' as mat;
+@use "typography" as custom-typography;
+@use "theme-green-colors" as theme-green;
+
+@mixin theme-green {
+  .theme-color-green {
+    @include mat.theme((
+      color: (
+        primary: theme-green.$primary-palette,
+        tertiary: theme-green.$tertiary-palette,
+      ),
+      typography: custom-typography.$typography-config,
+      density: (scale: 0),
+    ));
+
+    --swiper-navigation-color: var(--mat-sys-primary);
+  }
+}

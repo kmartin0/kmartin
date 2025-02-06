@@ -1,7 +1,8 @@
 import {Directive, ElementRef, HostListener} from '@angular/core';
 
 @Directive({
-  selector: '[appLoseFocusAfterClick]'
+    selector: '[appLoseFocusAfterClick]',
+    standalone: false
 })
 export class LoseFocusAfterClickDirective {
 

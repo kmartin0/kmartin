@@ -1,6 +1,8 @@
-@use 'node_modules/@angular/material' as mat;
+@use '@angular/material' as mat;
 
 // Custom Typography.
-$typography-config: mat.define-typography-config(
-  $font-family: 'Poppins, sans-serif'
+$typography-config: (
+  plain-family: Poppins,
+  brand-family: Poppins
 );
+

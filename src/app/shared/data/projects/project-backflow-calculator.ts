@@ -1,5 +1,5 @@
 import {Project} from "../../models/project";
-import {icons} from "../icons";
+import {registeredIcons} from "../registeredIcons";
 import {MainProject} from "../../models/main-project";
 
 export const projectBackflowCalculatorAndroid: Project = {
@@ -19,13 +19,13 @@ export const projectBackflowCalculatorAndroid: Project = {
     'MVVM Architecture using Architecture Components.'
   ],
   imageUrls: [
-    {name: 'Home', url: 'https://github.com/kmartin0/assets/blob/master/backflow-calculator/backflow_calculator_main.png?raw=true'},
+    {name: 'Home', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/backflow-calculator/backflow_calculator_main.png'},
     ],
-  stockImageUrl:  {name: 'Home', url: 'https://github.com/kmartin0/assets/blob/master/backflow-calculator/backflow_calculator_main.png?raw=true'},
-  techs: [icons.android, icons.kotlin],
+  stockImageUrl:  {name: 'Home', url: 'https://raw.githubusercontent.com/kmartin0/assets/refs/heads/master/backflow-calculator/backflow_calculator_main.png'},
+  techs: [registeredIcons.android, registeredIcons.kotlin],
   links: [
-    {icon: icons.github, url: 'https://github.com/kmartin0/backflow-calculator'},
-    {icon: icons.googlePlayStore, url: 'https://play.google.com/store/apps/details?id=com.km.backflow.calculator'}
+    {icon: registeredIcons.github, url: 'https://github.com/kmartin0/backflow-calculator'},
+    {icon: registeredIcons.googlePlayStore, url: 'https://play.google.com/store/apps/details?id=com.km.backflow.calculator'}
   ]
 }
 

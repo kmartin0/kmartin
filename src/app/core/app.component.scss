@@ -1,4 +1,5 @@
-@use 'node_modules/@angular/material' as mat;
+@use '@angular/material' as mat;
+@use 'devices' as devices;
 
 .app-component-container {
   height: 100%;
@@ -12,9 +13,17 @@
   top: 0;
 }
 
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
 .sidenav-container {
   width: 100%;
   height: 100%;
+
+  @include mat.sidenav-overrides((
+    container-shape: var(--mat-sys-corner-none)
+  ));
 }
 
 .sidenav {
@@ -23,52 +32,80 @@
   height: 100%;
 }
 
-.sidenav-inner-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+.sidenav-hamburger {
+  color: inherit;
 }
 
 .sidenav-items-container {
   margin: auto;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style-position: inside;
-}
-
-a {
+.sidenav-inner-container {
   width: 100%;
   height: 100%;
-  text-decoration: none;
-  display: inline-block;
-  white-space: nowrap;
-  margin: 16px 8px;
-  padding: 4px;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 16px 8px;
+    padding: 4px;
+    color: var(--mat-sys-primary);
+    font: var(--mat-sys-headline-large);
+
+    mat-icon {
+      line-height: 100%;
+      height: 30px;
+      font-size: 30px;
+      width: 30px;
+    }
+
+    @include devices.device(desktop, desktop-xl) {
+      font: var(--mat-sys-display-medium);
+
+      mat-icon {
+        height: 40px;
+        font-size: 40px;
+        width: 40px;
+      }
+    }
+
+    a:after {
+      color: var(--mat-sys-secondary);
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-position: inside;
+  }
+
+  mat-icon {
+    vertical-align: middle;
+  }
+
+  a > span {
+    padding: 0 16px;
+  }
+
+  li a:after {
+    content: "\2B9C";
+    line-height: 100%;
+    vertical-align: middle;
+    visibility: hidden;
+  }
+
+  li.active-nav a:after {
+    visibility: visible;
+  }
 }
 
-mat-icon {
-  vertical-align: middle;
-}
-
-a > span {
-  padding: 0 16px;
-}
-
-li a:after {
-  content: "\2B9C";
-  line-height: 100%;
-  vertical-align: middle;
-  visibility: hidden;
-}
-
-li.active-nav a:after {
-  visibility: visible;
-}

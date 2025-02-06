@@ -13,6 +13,16 @@
 
 .title {
   margin: auto 0;
+  font: var(--mat-sys-headline-medium);
+}
+
+.project-description {
+  font: var(--mat-sys-body-large);
+}
+
+.headline-small {
+  font: var(--mat-sys-headline-small);
+  margin: 0 0 16px
 }
 
 .tech-icons-container {
@@ -22,6 +32,11 @@
 .image-carousel-container {
   height: 500px;
   overflow: hidden;
+  padding: 8px;
+
+  .image {
+    padding: 8px;
+  }
 
   @include devices.device(tablet) {
     height: 650px;

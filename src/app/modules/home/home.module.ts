@@ -5,19 +5,19 @@ import {SharedModule} from '../../shared/shared.module';
 import {HomeRoutingModule} from './home-routing.module';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
-
-
+import {MatButton} from "@angular/material/button";
 
 @NgModule({
   declarations: [
     HomePageComponent
   ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    HomeRoutingModule,
-    MatIconModule,
-    MatTooltipModule
-  ]
+    imports: [
+        CommonModule,
+        SharedModule,
+        HomeRoutingModule,
+        MatIconModule,
+        MatTooltipModule,
+        MatButton
+    ]
 })
 export class HomeModule { }

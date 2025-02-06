@@ -2,4 +2,13 @@
 
 .resume-page-component-container {
   @include helpers.module-page;
+  text-align: center;
+}
+
+.under-construction-container {
+  p {
+    font: var(--mat-sys-headline-medium);
+    margin: 0 0 16px;
+  }
+
 }

@@ -1,19 +1,20 @@
 import {Component, ViewChild} from '@angular/core';
-import {ThemeService} from '../shared/services/theme-service';
+import {ThemeModeService} from '../shared/services/theme-mode-service';
 import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 import {filter, map, mergeMap} from 'rxjs/operators';
 import {MatDrawer} from '@angular/material/sidenav';
 import {MatIconRegistry} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
-import {icons} from '../shared/data/icons';
+import {registeredIcons} from '../shared/data/registeredIcons';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  standalone: false
 })
 export class AppComponent {
-  isDarkTheme$ = this.themeService.isDarkTheme;
+  appTheme$ = this.themeService.themeMode$;
 
   @ViewChild('drawer') matDrawer?: MatDrawer;
 
@@ -25,7 +26,7 @@ export class AppComponent {
     resume: '/resume'
   }
 
-  constructor(private themeService: ThemeService, private router: Router, private activatedRoute: ActivatedRoute,
+  constructor(private themeService: ThemeModeService, private router: Router, private activatedRoute: ActivatedRoute,
               private matIconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
     this.initTitle();
     this.initMatIcons();
@@ -50,8 +51,8 @@ export class AppComponent {
   }
 
   private initMatIcons() {
-    Object.keys(icons).forEach(iconKey => {
-      this.matIconRegistry.addSvgIcon(iconKey, this.sanitizer.bypassSecurityTrustResourceUrl(icons[iconKey].url));
+    Object.keys(registeredIcons).forEach(iconKey => {
+      this.matIconRegistry.addSvgIcon(iconKey, this.sanitizer.bypassSecurityTrustResourceUrl(registeredIcons[iconKey].url));
     });
   }
 }

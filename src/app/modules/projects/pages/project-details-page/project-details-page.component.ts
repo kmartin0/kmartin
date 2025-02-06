@@ -1,21 +1,19 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {myMainProjects} from '../../../../shared/data/projects';
 import {Project} from '../../../../shared/models/project';
 import {SwiperOptions, Swiper, Pagination, Navigation} from 'swiper';
-import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'app-project-details-page',
   templateUrl: './project-details-page.component.html',
-  styleUrls: ['./project-details-page.component.scss']
+  styleUrls: ['./project-details-page.component.scss'],
+  standalone: false
 })
 export class ProjectDetailsPageComponent implements OnInit {
 
   projects = myMainProjects;
   project!: Project;
-
-  @ViewChild('test') testEl!: HTMLElement;
 
   swiperConfig: SwiperOptions = {
     pagination: {clickable: true},
@@ -40,7 +38,7 @@ export class ProjectDetailsPageComponent implements OnInit {
         .reduce((a, b) => a.concat(b), [])
         .find(proj => proj.routeParam === projectParam);
 
-      project ? this.project = project : this.router.navigateByUrl('404');
+      project ? this.project = project : this.router.navigate(['/404'], {replaceUrl: true});
 
     });
   }

@@ -1,7 +1,7 @@
 <div class="page-container projects-page-component-container">
 
   <div class="project-container" *ngFor="let mainProject of mainProjects">
-    <h1>{{mainProject.title}}</h1>
+    <p class="title">{{mainProject.title}}</p>
 
     <div class="project-cards-container">
       <app-project-card *ngFor="let project of mainProject.projects" [project]="project"></app-project-card>

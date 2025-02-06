@@ -1,12 +1,10 @@
-<div class="app-component-container page-container mat-app-background"
-     [ngClass]="(isDarkTheme$ | async) ? 'theme-dark' : 'theme-default'">
-
+<div class="app-component-container page-container">
   <app-basic-toolbar class="sticky-toolbar">
-    <button mat-icon-button appLoseFocusAfterClick (click)="drawer.toggle()">
+    <button class="sidenav-hamburger" mat-icon-button appLoseFocusAfterClick (click)="drawer.toggle()">
       <mat-icon *ngIf="!drawer.opened">menu</mat-icon>
       <mat-icon *ngIf="drawer.opened">close</mat-icon>
     </button>
-    <span style="margin: 8px">{{title}}</span>
+    <span style="margin: 8px">{{ title }}</span>
     <span class="toolbar-spacer"></span>
   </app-basic-toolbar>
 
@@ -46,9 +44,7 @@
 
     </mat-drawer>
 
-<!--    <div>-->
-      <router-outlet></router-outlet>
-<!--    </div>-->
+    <router-outlet></router-outlet>
 
   </mat-drawer-container>
 

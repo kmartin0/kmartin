@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {ProjectCardComponent} from './components/project-card/project-card.component';
 import {ProjectDetailsPageComponent} from './pages/project-details-page/project-details-page.component';
 import {MatDividerModule} from '@angular/material/divider';
@@ -9,7 +9,6 @@ import {ProjectsPageComponent} from './pages/projects-page/projects-page.compone
 import {ProjectsRoutingModule} from './projects-routing.module';
 import {MatIconModule} from '@angular/material/icon';
 import {SharedModule} from '../../shared/shared.module';
-import {SwiperModule} from 'swiper/angular';
 
 
 @NgModule({
@@ -18,15 +17,16 @@ import {SwiperModule} from 'swiper/angular';
     ProjectDetailsPageComponent,
     ProjectsPageComponent
   ],
-  imports: [
-    CommonModule,
-    ProjectsRoutingModule,
-    SharedModule,
-    MatDividerModule,
-    MatCardModule,
-    MatTooltipModule,
-    MatIconModule,
-  ]
+    imports: [
+        CommonModule,
+        ProjectsRoutingModule,
+        SharedModule,
+        MatDividerModule,
+        MatCardModule,
+        MatTooltipModule,
+        MatIconModule,
+        NgOptimizedImage,
+    ]
 })
 export class ProjectsModule {
 }

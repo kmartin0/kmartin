@@ -1,5 +1,5 @@
 import {Project} from "../../models/project";
-import {icons} from "../icons";
+import {registeredIcons} from "../registeredIcons";
 import {MainProject} from "../../models/main-project";
 
 export const projectSpringBootBoilerplateApi: Project = {
@@ -17,9 +17,9 @@ export const projectSpringBootBoilerplateApi: Project = {
     ],
   imageUrls: [],
   stockImageUrl: {name: 'terminal', url: 'assets/terminal.png'},
-  techs: [icons.api, icons.java, icons.springBoot, icons.mysql, icons.mongodb],
+  techs: [registeredIcons.api, registeredIcons.java, registeredIcons.springBoot, registeredIcons.mysql, registeredIcons.mongodb],
   links: [
-    {icon: icons.github, url: 'https://github.com/kmartin0/spring-boot-boilerplate-api'},
+    {icon: registeredIcons.github, url: 'https://github.com/kmartin0/spring-boot-boilerplate-api'},
   ]
 }
 

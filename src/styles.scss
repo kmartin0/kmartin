@@ -1,3 +1,4 @@
+@use '@angular/material' as mat;
 @use 'node_modules/swiper/swiper-bundle.css';
 
 html, body {
@@ -12,6 +13,9 @@ html, body {
 
 body {
   margin: 0;
+  font-family: var(--mat-sys-body-medium-font);
+  background-color: var(--mat-sys-background);
+  color: var(--mat-sys-on-background);
 }
 
 .page-container {
@@ -19,27 +23,24 @@ body {
   width: 100%;
 }
 
-.toolbar-spacer {
-  flex: 1 1 auto;
-}
-
-.icon {
-  border-radius: 8px;
-  width: 40px;
-  height: 40px;
-  padding: 4px;
-  margin: 0 8px;
-}
-
-.under-construction-container {
-  text-align: center;
-
-  mat-icon {
-    $size: 36px;
+.mat-icon {
+  &.medium-icon {
+    $size: 42px;
 
     width: $size;
     height: $size;
     font-size: $size;
     line-height: 100%;
+    margin: 0 4px;
+    border-radius: 8px;
+    padding: 2px;
   }
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--mat-sys-primary);
+}
+
+.swiper-pagination {
+  padding: 8px;
 }
