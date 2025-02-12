@@ -1,6 +1,8 @@
-import {Injectable} from '@angular/core';
+import {Injectable, NgZone} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {OverlayContainer} from '@angular/cdk/overlay';
+import {Meta} from "@angular/platform-browser";
+import {ThemeModeService} from "./theme-mode-service";
+import {getPrimaryColor} from "../helpers";
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +12,16 @@ export class ThemeColorService {
   // Initialize a BehaviourSubject that holds the current app theme
   private _themeColor$ = new BehaviorSubject<APP_THEME_COLOR>(this.getThemeColorFromLocalStorage())
 
-  constructor(private overlayContainer: OverlayContainer) {
+  constructor(private meta: Meta, private themeModeService: ThemeModeService, private ngZone: NgZone) {
     this.initThemeColorSubject()
   }
 
   get themeColor$(): Observable<APP_THEME_COLOR> {
     return this._themeColor$.asObservable();
+  }
+
+  get themeColor(): APP_THEME_COLOR {
+    return this._themeColor$.getValue();
   }
 
   /**
@@ -46,6 +52,11 @@ export class ThemeColorService {
       // Persist the new themeColor in localStorage.
       this.persistThemeColor(themeColor);
 
+      // Update meta tag theme-color with the new primary color. Run in ngZone to ensure changes have been detected.
+      this.ngZone.run(() => {
+        const primaryColor = getPrimaryColor(this.themeModeService.themeMode)
+        this.meta.updateTag({name: 'theme-color', content: primaryColor});
+      })
     })
   }
 
