@@ -3,6 +3,8 @@
 @mixin module-page {
   padding: dimens.$default-page-padding;
   max-width: 1600px;
+  flex: 1;
   width: 100%;
+  height: 100%;
   margin: auto;
 }

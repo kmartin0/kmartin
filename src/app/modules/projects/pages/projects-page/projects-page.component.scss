@@ -2,9 +2,13 @@
 @use "dimens";
 @use "helpers";
 
+:host {
+  @include helpers.module-page();
+}
+
 .projects-page-component-container {
-  @include helpers.module-page;
   width: fit-content;
+  margin: auto;
 }
 
 .project-container {

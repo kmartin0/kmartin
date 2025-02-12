@@ -1,8 +1,11 @@
 @use "helpers";
 @use "devices";
 
+:host {
+  @include helpers.module-page();
+}
+
 .project-details-component-container {
-  @include helpers.module-page;
 }
 
 .title-container {

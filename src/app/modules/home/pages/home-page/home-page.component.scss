@@ -1,7 +1,10 @@
 @use "helpers";
 
+:host {
+  @include helpers.module-page();
+}
+
 .home-page-component-container {
-  @include helpers.module-page;
   display: flex;
   flex-direction: column;
   align-items: center;

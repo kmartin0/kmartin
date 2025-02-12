@@ -1,17 +1,36 @@
 import {Component, ViewChild} from '@angular/core';
 import {ThemeModeService} from '../shared/services/theme-mode-service';
-import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
+import {ActivatedRoute, NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {filter, map, mergeMap} from 'rxjs/operators';
-import {MatDrawer} from '@angular/material/sidenav';
-import {MatIconRegistry} from '@angular/material/icon';
+import {MatDrawer, MatDrawerContainer, MatDrawerContent} from '@angular/material/sidenav';
+import {MatIcon, MatIconRegistry} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
 import {registeredIcons} from '../shared/data/registeredIcons';
+import {BasicToolbarComponent} from "../shared/components/basic-toolbar/basic-toolbar.component";
+import {NgIf} from "@angular/common";
+import {MatIconButton} from "@angular/material/button";
+import {
+  LoseFocusAfterClickDirective
+} from "../shared/directives/lose-focus-after-click-directive/lose-focus-after-click.directive";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  standalone: false
+  standalone: true,
+  imports: [
+    BasicToolbarComponent,
+    MatIcon,
+    MatDrawerContainer,
+    MatDrawerContent,
+    RouterOutlet,
+    NgIf,
+    RouterLinkActive,
+    RouterLink,
+    MatDrawer,
+    MatIconButton,
+    LoseFocusAfterClickDirective
+  ]
 })
 export class AppComponent {
   appTheme$ = this.themeService.themeMode$;

@@ -1,7 +1,10 @@
 @use "helpers";
 
+:host {
+  @include helpers.module-page();
+}
+
 .resume-page-component-container {
-  @include helpers.module-page;
   text-align: center;
 }
 

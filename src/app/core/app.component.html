@@ -1,4 +1,4 @@
-<div class="app-component-container page-container">
+<div class="app-component-container">
   <app-basic-toolbar class="sticky-toolbar">
     <button class="sidenav-hamburger" mat-icon-button appLoseFocusAfterClick (click)="drawer.toggle()">
       <mat-icon *ngIf="!drawer.opened">menu</mat-icon>
@@ -8,11 +8,10 @@
     <span class="toolbar-spacer"></span>
   </app-basic-toolbar>
 
-  <mat-drawer-container class="sidenav-container">
+  <mat-drawer-container class="drawer-container">
     <mat-drawer #drawer class="sidenav" [autoFocus]="false">
 
       <div class="sidenav-inner-container">
-
         <div class="sidenav-items-container">
 
           <ul>
@@ -44,8 +43,12 @@
 
     </mat-drawer>
 
-    <router-outlet></router-outlet>
+    <mat-drawer-content class="content-container">
+      <div class="router-wrapper">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-drawer-content>
 
   </mat-drawer-container>
-
 </div>
+

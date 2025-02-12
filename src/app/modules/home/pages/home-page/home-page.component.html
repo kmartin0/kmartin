@@ -1,15 +1,15 @@
-<div class="page-container home-page-component-container">
+<div class="home-page-component-container">
 
-  <div class="header">
-    <mat-icon class="face-icon">face</mat-icon>
-    <p class="title">Hi, I'm Kevin Martin</p>
-    <p class="subtitle">Welcome to my website</p>
-  </div>
+    <div class="header">
+      <mat-icon class="face-icon">face</mat-icon>
+      <p class="title">Hi, I'm Kevin Martin</p>
+      <p class="subtitle">Welcome to my website</p>
+    </div>
 
-  <div class="icons-container">
-    <a *ngFor="let link of references | keyvalue" [href]="link.value.url" target="_blank">
-      <mat-icon class="medium-icon" [svgIcon]="link.key" [matTooltip]="link.value.icon.name"></mat-icon>
-    </a>
-  </div>
+    <div class="icons-container">
+      <a *ngFor="let link of references | keyvalue" [href]="link.value.url" target="_blank">
+        <mat-icon class="medium-icon" [svgIcon]="link.key" [matTooltip]="link.value.icon.name"></mat-icon>
+      </a>
+    </div>
 
 </div>

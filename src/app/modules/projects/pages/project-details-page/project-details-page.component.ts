@@ -3,12 +3,18 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {myMainProjects} from '../../../../shared/data/projects';
 import {Project} from '../../../../shared/models/project';
 import {SwiperOptions, Swiper, Pagination, Navigation} from 'swiper';
+import {NgIf, NgFor} from '@angular/common';
+import {MatIcon} from '@angular/material/icon';
+import {MatTooltip} from '@angular/material/tooltip';
+import {MatDivider} from '@angular/material/divider';
+import {SwiperModule} from 'swiper/angular';
 
 @Component({
   selector: 'app-project-details-page',
   templateUrl: './project-details-page.component.html',
   styleUrls: ['./project-details-page.component.scss'],
-  standalone: false
+  standalone: true,
+  imports: [NgIf, NgFor, MatIcon, MatTooltip, MatDivider, SwiperModule]
 })
 export class ProjectDetailsPageComponent implements OnInit {
 

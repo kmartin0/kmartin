@@ -1,13 +1,22 @@
 import {Component} from '@angular/core';
 import {APP_THEME_MODE, ThemeModeService} from '../../services/theme-mode-service';
 import {APP_THEME_COLOR, ThemeColorService} from "../../services/theme-color-service";
-import {MatRadioChange} from "@angular/material/radio";
+import {MatRadioChange, MatRadioGroup, MatRadioButton} from "@angular/material/radio";
+import {MatIconButton} from '@angular/material/button';
+import {MatMenuTrigger, MatMenu} from '@angular/material/menu';
+import {MatIcon} from '@angular/material/icon';
+import {
+  LoseFocusAfterClickDirective
+} from '../../directives/lose-focus-after-click-directive/lose-focus-after-click.directive';
+import {MatTooltip} from '@angular/material/tooltip';
+import {AsyncPipe} from '@angular/common';
 
 @Component({
   selector: 'app-theme-toggle',
   templateUrl: './theme-toggle.component.html',
   styleUrls: ['./theme-toggle.component.scss'],
-  standalone: false
+  standalone: true,
+  imports: [MatIconButton, MatMenuTrigger, MatIcon, LoseFocusAfterClickDirective, MatTooltip, MatMenu, MatRadioGroup, MatRadioButton, AsyncPipe]
 })
 export class ThemeToggleComponent {
 

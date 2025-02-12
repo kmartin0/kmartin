@@ -1,4 +1,7 @@
-<a [routerLink]="project.routeParam" *ngIf="project">
+<a [routerLink]="project.routeParam" routerLinkActive="active"
+   [routerLinkActiveOptions]="{exact: true}"
+   *ngIf="project"
+   (click)="$event.preventDefault()">
 
   <mat-card appearance="raised" class="project-card-component-container">
 
