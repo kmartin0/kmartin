@@ -118,6 +118,14 @@
               "src/styles.scss",
               "src/theme/app-theme.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/theme",
+                "src/theme/config",
+                "src/theme/custom-component-themes",
+                "."
+              ]
+            },
             "scripts": []
           }
         }
