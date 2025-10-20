@@ -6,8 +6,10 @@ import {musicPlayerAndroidMainProject} from "./projects/project-music-player-and
 import {civilianCprMainProject} from "./projects/project-civilian-cpr";
 import {backflowCalculatorMainProject} from "./projects/project-backflow-calculator";
 import {springBootBoilerplateApiMainProject} from "./projects/project-spring-boot-boilerplate-api";
+import {dartsMatcherV2MainProject} from './projects/project-darts-matcher-v2';
 
 export const myMainProjects: MainProject[] = [
+  dartsMatcherV2MainProject,
   parcelOrganizerMainProject,
   dartsMatcherMainProject,
   springBootBoilerplateApiMainProject,
