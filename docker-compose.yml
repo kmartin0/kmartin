@@ -6,6 +6,6 @@ services:
     build:
       context: .
       args:
-        - PROFILE=dev # Accepts dev, prod
+        PROFILE: dev
     ports:
       - "4200:80"
