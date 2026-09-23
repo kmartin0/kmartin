@@ -18,7 +18,7 @@ RUN npm install
 ARG PROFILE
 ENV PROFILE $PROFILE
 
-# Generate the build of the application (defaults to dev build if no profile is set)
+# Generate the build of the application (dev or prod - defaults to dev)
 RUN npm run build-${PROFILE:-dev}
 
 # Stage 2: Serve app with nginx server
